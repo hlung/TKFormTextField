@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E0356E371DEDF3B200C6678C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E361DEDF3B200C6678C /* AppDelegate.swift */; };
+		E0356E391DEDF3B200C6678C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E381DEDF3B200C6678C /* ViewController.swift */; };
+		E0356E3C1DEDF3B200C6678C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0356E3A1DEDF3B200C6678C /* Main.storyboard */; };
+		E0356E3E1DEDF3B200C6678C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0356E3D1DEDF3B200C6678C /* Assets.xcassets */; };
+		E0356E411DEDF3B200C6678C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0356E3F1DEDF3B200C6678C /* LaunchScreen.storyboard */; };
+		E0356E4C1DEDF3B200C6678C /* TKFormTextFieldDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E4B1DEDF3B200C6678C /* TKFormTextFieldDemoTests.swift */; };
+		E0356E571DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E561DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift */; };
+		E0356E661DEDF44F00C6678C /* TKFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E651DEDF44F00C6678C /* TKFormTextField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E0356E481DEDF3B200C6678C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0356E2B1DEDF3B200C6678C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0356E321DEDF3B200C6678C;
+			remoteInfo = TKFormTextFieldDemo;
+		};
+		E0356E531DEDF3B200C6678C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0356E2B1DEDF3B200C6678C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0356E321DEDF3B200C6678C;
+			remoteInfo = TKFormTextFieldDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E0356E331DEDF3B200C6678C /* TKFormTextFieldDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKFormTextFieldDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0356E361DEDF3B200C6678C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E0356E381DEDF3B200C6678C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E0356E3B1DEDF3B200C6678C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E0356E3D1DEDF3B200C6678C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E0356E401DEDF3B200C6678C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E0356E421DEDF3B200C6678C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0356E471DEDF3B200C6678C /* TKFormTextFieldDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TKFormTextFieldDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0356E4B1DEDF3B200C6678C /* TKFormTextFieldDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKFormTextFieldDemoTests.swift; sourceTree = "<group>"; };
+		E0356E4D1DEDF3B200C6678C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0356E521DEDF3B200C6678C /* TKFormTextFieldDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TKFormTextFieldDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0356E561DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKFormTextFieldDemoUITests.swift; sourceTree = "<group>"; };
+		E0356E581DEDF3B200C6678C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0356E651DEDF44F00C6678C /* TKFormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKFormTextField.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E0356E301DEDF3B200C6678C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0356E441DEDF3B200C6678C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0356E4F1DEDF3B200C6678C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E0356E2A1DEDF3B200C6678C = {
+			isa = PBXGroup;
+			children = (
+				E0356E641DEDF43F00C6678C /* TKFormTextField */,
+				E0356E351DEDF3B200C6678C /* TKFormTextFieldDemo */,
+				E0356E4A1DEDF3B200C6678C /* TKFormTextFieldDemoTests */,
+				E0356E551DEDF3B200C6678C /* TKFormTextFieldDemoUITests */,
+				E0356E341DEDF3B200C6678C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E0356E341DEDF3B200C6678C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0356E331DEDF3B200C6678C /* TKFormTextFieldDemo.app */,
+				E0356E471DEDF3B200C6678C /* TKFormTextFieldDemoTests.xctest */,
+				E0356E521DEDF3B200C6678C /* TKFormTextFieldDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0356E351DEDF3B200C6678C /* TKFormTextFieldDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E0356E361DEDF3B200C6678C /* AppDelegate.swift */,
+				E0356E381DEDF3B200C6678C /* ViewController.swift */,
+				E0356E3A1DEDF3B200C6678C /* Main.storyboard */,
+				E0356E3D1DEDF3B200C6678C /* Assets.xcassets */,
+				E0356E3F1DEDF3B200C6678C /* LaunchScreen.storyboard */,
+				E0356E421DEDF3B200C6678C /* Info.plist */,
+			);
+			path = TKFormTextFieldDemo;
+			sourceTree = "<group>";
+		};
+		E0356E4A1DEDF3B200C6678C /* TKFormTextFieldDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E0356E4B1DEDF3B200C6678C /* TKFormTextFieldDemoTests.swift */,
+				E0356E4D1DEDF3B200C6678C /* Info.plist */,
+			);
+			path = TKFormTextFieldDemoTests;
+			sourceTree = "<group>";
+		};
+		E0356E551DEDF3B200C6678C /* TKFormTextFieldDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E0356E561DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift */,
+				E0356E581DEDF3B200C6678C /* Info.plist */,
+			);
+			path = TKFormTextFieldDemoUITests;
+			sourceTree = "<group>";
+		};
+		E0356E641DEDF43F00C6678C /* TKFormTextField */ = {
+			isa = PBXGroup;
+			children = (
+				E0356E651DEDF44F00C6678C /* TKFormTextField.swift */,
+			);
+			path = TKFormTextField;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E0356E321DEDF3B200C6678C /* TKFormTextFieldDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0356E5B1DEDF3B200C6678C /* Build configuration list for PBXNativeTarget "TKFormTextFieldDemo" */;
+			buildPhases = (
+				E0356E2F1DEDF3B200C6678C /* Sources */,
+				E0356E301DEDF3B200C6678C /* Frameworks */,
+				E0356E311DEDF3B200C6678C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TKFormTextFieldDemo;
+			productName = TKFormTextFieldDemo;
+			productReference = E0356E331DEDF3B200C6678C /* TKFormTextFieldDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E0356E461DEDF3B200C6678C /* TKFormTextFieldDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0356E5E1DEDF3B200C6678C /* Build configuration list for PBXNativeTarget "TKFormTextFieldDemoTests" */;
+			buildPhases = (
+				E0356E431DEDF3B200C6678C /* Sources */,
+				E0356E441DEDF3B200C6678C /* Frameworks */,
+				E0356E451DEDF3B200C6678C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0356E491DEDF3B200C6678C /* PBXTargetDependency */,
+			);
+			name = TKFormTextFieldDemoTests;
+			productName = TKFormTextFieldDemoTests;
+			productReference = E0356E471DEDF3B200C6678C /* TKFormTextFieldDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E0356E511DEDF3B200C6678C /* TKFormTextFieldDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0356E611DEDF3B200C6678C /* Build configuration list for PBXNativeTarget "TKFormTextFieldDemoUITests" */;
+			buildPhases = (
+				E0356E4E1DEDF3B200C6678C /* Sources */,
+				E0356E4F1DEDF3B200C6678C /* Frameworks */,
+				E0356E501DEDF3B200C6678C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0356E541DEDF3B200C6678C /* PBXTargetDependency */,
+			);
+			name = TKFormTextFieldDemoUITests;
+			productName = TKFormTextFieldDemoUITests;
+			productReference = E0356E521DEDF3B200C6678C /* TKFormTextFieldDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E0356E2B1DEDF3B200C6678C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Viki;
+				TargetAttributes = {
+					E0356E321DEDF3B200C6678C = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					E0356E461DEDF3B200C6678C = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E0356E321DEDF3B200C6678C;
+					};
+					E0356E511DEDF3B200C6678C = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E0356E321DEDF3B200C6678C;
+					};
+				};
+			};
+			buildConfigurationList = E0356E2E1DEDF3B200C6678C /* Build configuration list for PBXProject "TKFormTextFieldDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E0356E2A1DEDF3B200C6678C;
+			productRefGroup = E0356E341DEDF3B200C6678C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E0356E321DEDF3B200C6678C /* TKFormTextFieldDemo */,
+				E0356E461DEDF3B200C6678C /* TKFormTextFieldDemoTests */,
+				E0356E511DEDF3B200C6678C /* TKFormTextFieldDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E0356E311DEDF3B200C6678C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0356E411DEDF3B200C6678C /* LaunchScreen.storyboard in Resources */,
+				E0356E3E1DEDF3B200C6678C /* Assets.xcassets in Resources */,
+				E0356E3C1DEDF3B200C6678C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0356E451DEDF3B200C6678C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0356E501DEDF3B200C6678C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E0356E2F1DEDF3B200C6678C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0356E391DEDF3B200C6678C /* ViewController.swift in Sources */,
+				E0356E371DEDF3B200C6678C /* AppDelegate.swift in Sources */,
+				E0356E661DEDF44F00C6678C /* TKFormTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0356E431DEDF3B200C6678C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0356E4C1DEDF3B200C6678C /* TKFormTextFieldDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0356E4E1DEDF3B200C6678C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0356E571DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E0356E491DEDF3B200C6678C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0356E321DEDF3B200C6678C /* TKFormTextFieldDemo */;
+			targetProxy = E0356E481DEDF3B200C6678C /* PBXContainerItemProxy */;
+		};
+		E0356E541DEDF3B200C6678C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0356E321DEDF3B200C6678C /* TKFormTextFieldDemo */;
+			targetProxy = E0356E531DEDF3B200C6678C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E0356E3A1DEDF3B200C6678C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0356E3B1DEDF3B200C6678C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E0356E3F1DEDF3B200C6678C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0356E401DEDF3B200C6678C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E0356E591DEDF3B200C6678C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E0356E5A1DEDF3B200C6678C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E0356E5C1DEDF3B200C6678C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TKFormTextFieldDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hlung.TKFormTextFieldDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E0356E5D1DEDF3B200C6678C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TKFormTextFieldDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hlung.TKFormTextFieldDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E0356E5F1DEDF3B200C6678C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TKFormTextFieldDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hlung.TKFormTextFieldDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TKFormTextFieldDemo.app/TKFormTextFieldDemo";
+			};
+			name = Debug;
+		};
+		E0356E601DEDF3B200C6678C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TKFormTextFieldDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hlung.TKFormTextFieldDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TKFormTextFieldDemo.app/TKFormTextFieldDemo";
+			};
+			name = Release;
+		};
+		E0356E621DEDF3B200C6678C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = TKFormTextFieldDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hlung.TKFormTextFieldDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TKFormTextFieldDemo;
+			};
+			name = Debug;
+		};
+		E0356E631DEDF3B200C6678C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = TKFormTextFieldDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hlung.TKFormTextFieldDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TKFormTextFieldDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E0356E2E1DEDF3B200C6678C /* Build configuration list for PBXProject "TKFormTextFieldDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0356E591DEDF3B200C6678C /* Debug */,
+				E0356E5A1DEDF3B200C6678C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0356E5B1DEDF3B200C6678C /* Build configuration list for PBXNativeTarget "TKFormTextFieldDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0356E5C1DEDF3B200C6678C /* Debug */,
+				E0356E5D1DEDF3B200C6678C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E0356E5E1DEDF3B200C6678C /* Build configuration list for PBXNativeTarget "TKFormTextFieldDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0356E5F1DEDF3B200C6678C /* Debug */,
+				E0356E601DEDF3B200C6678C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E0356E611DEDF3B200C6678C /* Build configuration list for PBXNativeTarget "TKFormTextFieldDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0356E621DEDF3B200C6678C /* Debug */,
+				E0356E631DEDF3B200C6678C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E0356E2B1DEDF3B200C6678C /* Project object */;
+}
