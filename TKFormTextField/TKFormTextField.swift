@@ -70,14 +70,13 @@ open class TKFormTextField: UITextField {
     }
   }
   
-  fileprivate func updatePlaceholder() {
-    if let placeholder = self.titleOrPlaceholder(), let font = self.placeholderFont ?? self.font {
-      let attributes: [String: Any] = [NSForegroundColorAttributeName: placeholderColor, NSFontAttributeName: font]
-      self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attributes)
+  open var titleColor: UIColor = UIColor.lightGray {
+    didSet {
+      self.updateTitleColor()
     }
   }
   
-  open var titleColor: UIColor = UIColor.gray {
+  open var selectedTitleColor: UIColor = UIColor.gray {
     didSet {
       self.updateTitleColor()
     }
@@ -89,25 +88,18 @@ open class TKFormTextField: UITextField {
     }
   }
   
-  open var errorColor: UIColor = UIColor.red {
-    didSet {
-      self.updateColors()
-    }
-  }
-  
-  open var selectedTitleColor: UIColor = UIColor.black {
-    didSet {
-      self.updateTitleColor()
-    }
-  }
-  
   open var selectedLineColor: UIColor = UIColor.black {
     didSet {
       self.updateLineView()
     }
   }
   
-  // MARK: Line height
+  open var errorColor: UIColor = UIColor.red {
+    didSet {
+      self.updateColors()
+    }
+  }
+  
   open var lineHeight: CGFloat = 0.5 {
     didSet {
       self.updateLineView()
@@ -135,21 +127,21 @@ open class TKFormTextField: UITextField {
     }
   }
   
-  /// A string for errorLabel
+  // A string for errorLabel
   open var error: String? {
     didSet {
       self.updateControl(true)
     }
   }
   
-  /// A Boolean value that determines whether the textfield is being edited or is selected.
+  // A Boolean value that determines whether the textfield is being edited or is selected.
   open var editingOrSelected: Bool {
     get {
       return super.isEditing || self.isSelected;
     }
   }
   
-  /// A Boolean value that determines whether the receiver has an error message.
+  // A Boolean value that determines whether the receiver has an error message.
   open var hasError: Bool {
     get {
       return self.error != nil && self.error != ""
@@ -158,17 +150,15 @@ open class TKFormTextField: UITextField {
   
   fileprivate var _renderingInInterfaceBuilder: Bool = false
   
-  /// The text content of the textfield
+  // The text content of the textfield
   override open var text: String? {
     didSet {
       self.updateControl(false)
     }
   }
   
-  /**
-   The String to display when the input field is empty.
-   The placeholder can also appear in the title label when both `title` `selectedTitle` and are `nil`.
-   */
+  // The String to display when the input field is empty.
+  // The placeholder can also appear in the title label when both `title` `selectedTitle` and are `nil`.
   override open var placeholder: String? {
     didSet {
       self.setNeedsDisplay()
@@ -177,14 +167,14 @@ open class TKFormTextField: UITextField {
     }
   }
   
-  /// The String to display when the textfield is editing and the input is not empty.
+  // The String to display when the textfield is editing and the input is not empty.
   open var selectedTitle: String? {
     didSet {
       self.updateControl()
     }
   }
   
-  /// The String to display when the textfield is not editing and the input is not empty.
+  // The String to display when the textfield is not editing and the input is not empty.
   open var title: String? {
     didSet {
       self.updateControl()
@@ -242,20 +232,16 @@ open class TKFormTextField: UITextField {
   
   // MARK: Responder handling
   
-  /**
-   Attempt the control to become the first responder
-   - returns: True when successfull becoming the first responder
-   */
+  // Attempt the control to become the first responder
+  // - returns: True when successfully becoming the first responder
   override open func becomeFirstResponder() -> Bool {
     let result = super.becomeFirstResponder()
     self.updateControl(true)
     return result
   }
   
-  /**
-   Attempt the control to resign being the first responder
-   - returns: True when successfull resigning being the first responder
-   */
+  // Attempt the control to resign being the first responder
+  // - returns: True when successfully resigning being the first responder
   override open func resignFirstResponder() -> Bool {
     let result =  super.resignFirstResponder()
     self.updateControl(true)
@@ -279,9 +265,16 @@ open class TKFormTextField: UITextField {
     self.updateLineColor()
   }
   
+  fileprivate func updatePlaceholder() {
+    if let placeholder = self.titleOrPlaceholder(), let font = self.placeholderFont ?? self.font {
+      let attributes: [String: Any] = [NSForegroundColorAttributeName: placeholderColor, NSFontAttributeName: font]
+      self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attributes)
+    }
+  }
+  
   // MARK: - Color updates
   
-  /// Update the colors for the control. Override to customize colors.
+  // Update the colors for the control. Override to customize colors.
   open func updateColors() {
     self.updateLineColor()
     self.updateTitleColor()
@@ -317,9 +310,7 @@ open class TKFormTextField: UITextField {
   
   fileprivate var _titleVisible = false
   
-  /*
-   *   Set this value to make the title visible
-   */
+  // Set this value to make the title visible
   open func setTitleVisible(_ titleVisible:Bool, animated:Bool = false, animationCompletion: (()->())? = nil) {
     if(_titleVisible == titleVisible) {
       return
@@ -329,9 +320,7 @@ open class TKFormTextField: UITextField {
     self.updateTitleVisibility(animated, completion: animationCompletion)
   }
   
-  /**
-   Returns whether the title is being displayed on the control.
-   */
+  // Returns whether the title is being displayed on the control.
   open func isTitleVisible() -> Bool {
     return self.hasText || _titleVisible
   }
@@ -432,7 +421,7 @@ open class TKFormTextField: UITextField {
   
   // MARK: - Layout
   
-  /// Invoked when the interface builder renders the control
+  // Invoked when the interface builder renders the control
   override open func prepareForInterfaceBuilder() {
     if #available(iOS 8.0, *) {
       super.prepareForInterfaceBuilder()
@@ -481,17 +470,16 @@ open class TKFormTextField: UITextField {
   }
   
   open override var description: String {
-    return "TKFormTextField[\(placeholder)]"
+    return "[TKFormTextField(\(placeholder)) text:\(text)]"
   }
   
 }
 
 fileprivate extension UITextField {
-  /// Moves the caret to the correct position by removing the trailing whitespace
+  // Moves the caret to the correct position by removing the trailing whitespace
   func fixCaretPosition() {
     // Moving the caret to the correct position by removing the trailing whitespace
     // http://stackoverflow.com/questions/14220187/uitextfield-has-trailing-whitespace-after-securetextentry-toggle
-    
     let beginning = self.beginningOfDocument
     self.selectedTextRange = self.textRange(from: beginning, to: beginning)
     let end = self.endOfDocument

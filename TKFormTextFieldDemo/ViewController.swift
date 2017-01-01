@@ -22,18 +22,19 @@ class ViewController: UIViewController {
     self.emailTextField.placeholder = "Email"
     self.emailTextField.enablesReturnKeyAutomatically = true
     self.emailTextField.returnKeyType = .next
+    self.emailTextField.clearButtonMode = .whileEditing
     self.emailTextField.delegate = self
     
     self.passwordTextField.placeholder = "Password"
     self.passwordTextField.enablesReturnKeyAutomatically = true
     self.passwordTextField.returnKeyType = .done
+    self.passwordTextField.clearButtonMode = .whileEditing
     self.passwordTextField.delegate = self
+    self.passwordTextField.isSecureTextEntry = true
     
     // Validation logic
-    self.emailTextField.addTarget(self, action: #selector(clearErrorMessageIfNeeded), for: .editingChanged)
-    self.emailTextField.addTarget(self, action: #selector(updateErrorMessage), for: .editingDidEnd)
-    self.passwordTextField.addTarget(self, action: #selector(clearErrorMessageIfNeeded), for: .editingChanged)
-    self.passwordTextField.addTarget(self, action: #selector(updateErrorMessage), for: .editingDidEnd)
+    self.addTargetForErrorUpdating(self.emailTextField)
+    self.addTargetForErrorUpdating(self.passwordTextField)
     
     // Customize labels
     self.emailTextField.titleLabel.font = UIFont.systemFont(ofSize: 18)
@@ -43,36 +44,37 @@ class ViewController: UIViewController {
     self.passwordTextField.font = UIFont.systemFont(ofSize: 18)
     self.passwordTextField.errorLabel.font = UIFont.systemFont(ofSize: 18)
     
-    // Disable submit button at first
+    // Disable submitButton at start
     self.submitButton.isEnabled = false
   }
   
-  func updateErrorMessage(textField: TKFormTextField) {
-    if textField == emailTextField {
-      textField.error = DataValidator.email(text: textField.text)
-    } else if textField == passwordTextField {
-      textField.error = DataValidator.password(text: textField.text)
-    }
+  func addTargetForErrorUpdating(_ textField: TKFormTextField) {
+    textField.addTarget(self, action: #selector(clearErrorIfNeeded), for: .editingChanged)
+    textField.addTarget(self, action: #selector(updateError), for: .editingDidEnd)
+  }
+  
+  func updateError(textField: TKFormTextField) {
+    textField.error = validationError(textField)
     self.submitButton.isEnabled = isAllTextFieldsValid()
   }
   
-  func clearErrorMessageIfNeeded(textField: TKFormTextField) {
-    if textField == emailTextField {
-      if DataValidator.email(text: textField.text) == nil {
-        textField.error = nil
-      }
-    } else if textField == passwordTextField {
-      if DataValidator.password(text: textField.text) == nil {
-        textField.error = nil
-      }
+  func clearErrorIfNeeded(textField: TKFormTextField) {
+    if validationError(textField) == nil {
+      textField.error = nil
     }
     self.submitButton.isEnabled = isAllTextFieldsValid()
   }
   
   fileprivate func isAllTextFieldsValid() -> Bool {
-    guard DataValidator.email(text: emailTextField.text) == nil else { return false }
-    guard DataValidator.password(text: passwordTextField.text) == nil else { return false }
-    return true
+    return validationError(emailTextField) == nil && validationError(passwordTextField) == nil
+  }
+  
+  private func validationError(_ textField: TKFormTextField) -> String? {
+    if textField == emailTextField {
+      return DataValidator.email(text: textField.text)
+    } else {
+      return DataValidator.password(text: textField.text)
+    }
   }
   
   @IBAction func submit(_ sender: Any) {
