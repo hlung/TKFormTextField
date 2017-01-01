@@ -116,19 +116,21 @@ open class TKFormTextField: UITextField {
   }
   
   /// The backing property for the highlighted property
-  fileprivate var _highlighted = false
+//  fileprivate var _highlighted = false
   
   /// A Boolean value that determines whether the receiver is highlighted. When changing this value, highlighting will be done with animation
-  override open var isHighlighted: Bool {
-    get {
-      return _highlighted
-    }
-    set {
-      _highlighted = newValue
-      self.updateTitleColor()
-      self.updateLineView()
-    }
-  }
+//  override open var isHighlighted: Bool {
+//    get {
+//      print("TKFormTextField[\(placeholder)] GET _highlighted \(_highlighted)")
+//      return _highlighted
+//    }
+//    set {
+//      _highlighted = newValue
+//      print("TKFormTextField[\(placeholder)] SET _highlighted \(_highlighted)")
+//      self.updateTitleColor()
+//      self.updateLineView()
+//    }
+//  }
   
   /// A Boolean value that determines whether the textfield is being edited or is selected.
   open var editingOrSelected: Bool {
@@ -173,11 +175,11 @@ open class TKFormTextField: UITextField {
   }
   
   /// The String to display when the textfield is not editing and the input is not empty.
-  open var title: String? {
-    didSet {
-      self.updateControl()
-    }
-  }
+//  open var title: String? {
+//    didSet {
+//      self.updateControl()
+//    }
+//  }
   
   // Determines whether the field is selected. When selected, the title floats above the textbox.
   open override var isSelected: Bool {
@@ -209,13 +211,13 @@ open class TKFormTextField: UITextField {
   }
   
   fileprivate func addEditingChangedObserver() {
-    self.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+    self.addTarget(self, action: #selector(tk_editingChanged), for: .editingChanged)
   }
   
   /**
    Invoked when the editing state of the textfield changes. Override to respond to this change.
    */
-  open func editingChanged() {
+  open func tk_editingChanged() {
     updateControl(true)
     updateTitleLabel(true)
   }
@@ -318,28 +320,18 @@ open class TKFormTextField: UITextField {
   }
   
   fileprivate func updateTitleColor() {
-    if self.editingOrSelected || self.isHighlighted {
+    if self.editingOrSelected {
       self.titleLabel.textColor = self.selectedTitleColor
     } else {
       self.titleLabel.textColor = self.titleColor
     }
+    //print("updateTitleColor \(self) \n self.isHighlighted=\(self.isHighlighted)  self.editingOrSelected=\(self.editingOrSelected)")
   }
   
   // MARK: - Title handling
   
   fileprivate func updateTitleLabel(_ animated:Bool = false) {
-    
-    var titleText: String? = nil
-    
-    if self.editingOrSelected {
-      titleText = self.selectedTitleOrTitlePlaceholder()
-      if titleText == nil {
-        titleText = self.titleOrPlaceholder()
-      }
-    } else {
-      titleText = self.titleOrPlaceholder()
-    }
-    self.titleLabel.text = titleText
+    self.titleLabel.text = self.placeholder
     self.updateTitleVisibility(animated)
   }
   
@@ -491,19 +483,19 @@ open class TKFormTextField: UITextField {
   }
   
   // MARK: - Helpers
-  fileprivate func titleOrPlaceholder() -> String? {
-    if let title = self.title ?? self.placeholder {
-      return title
-    }
-    return nil
-  }
-  
-  fileprivate func selectedTitleOrTitlePlaceholder() -> String? {
-    if let title = self.selectedTitle ?? self.title ?? self.placeholder {
-      return title
-    }
-    return nil
-  }
+//  fileprivate func titleOrPlaceholder() -> String? {
+//    if let title = self.title ?? self.placeholder {
+//      return title
+//    }
+//    return nil
+//  }
+//  
+//  fileprivate func selectedTitleOrTitlePlaceholder() -> String? {
+//    if let title = self.selectedTitle ?? self.title ?? self.placeholder {
+//      return title
+//    }
+//    return nil
+//  }
   
   // MARK: Left to right support
   var isLeftToRightLanguage = UIApplication.shared.userInterfaceLayoutDirection == .leftToRight {
@@ -518,6 +510,10 @@ open class TKFormTextField: UITextField {
     } else {
       self.textAlignment = .right
     }
+  }
+  
+  open override var description: String {
+    return "TKFormTextField[\(placeholder)]"
   }
   
 }
