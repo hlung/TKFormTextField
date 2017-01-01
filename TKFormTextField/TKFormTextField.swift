@@ -4,7 +4,7 @@
 //
 //  A UITextField whose placeholder text moves up when text is entered.
 //  There's also an underline, and a multi-line error text can be displayed below.
-//  Set errorMessage to show/hide error and trigger error coloring.
+//  Set error to show/hide error and trigger error coloring.
 //  Credit: https://github.com/Skyscanner/SkyFloatingLabelTextField
 //
 //  Created by Thongchai Kolyutsakul on 30/11/16.
@@ -14,6 +14,33 @@
 import UIKit
 
 open class TKFormTextField: UITextField {
+  
+  // MARK: - Initializers
+  
+  override public init(frame: CGRect) {
+    super.init(frame: frame)
+    self.setup()
+  }
+  
+  required public init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    self.setup()
+  }
+  
+  fileprivate final func setup() {
+    self.borderStyle = .none
+    self.createTitleLabel()
+    self.createErrorLabel()
+    self.createLineView()
+    self.updateColors()
+    self.updateTextAligment()
+    self.addTarget(self, action: #selector(tk_editingChanged), for: .editingChanged)
+  }
+  
+  open func tk_editingChanged() {
+    updateControl(true)
+    updateTitleLabel(true)
+  }
   
   // MARK: Views
   open var titleLabel: UILabel! // the label above input text
@@ -44,7 +71,7 @@ open class TKFormTextField: UITextField {
   }
   
   fileprivate func updatePlaceholder() {
-    if let placeholder = self.placeholder, let font = self.placeholderFont ?? self.font {
+    if let placeholder = self.titleOrPlaceholder(), let font = self.placeholderFont ?? self.font {
       let attributes: [String: Any] = [NSForegroundColorAttributeName: placeholderColor, NSFontAttributeName: font]
       self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attributes)
     }
@@ -68,7 +95,7 @@ open class TKFormTextField: UITextField {
     }
   }
   
-  open var selectedTitleColor: UIColor = UIColor.blue {
+  open var selectedTitleColor: UIColor = UIColor.black {
     didSet {
       self.updateTitleColor()
     }
@@ -109,28 +136,11 @@ open class TKFormTextField: UITextField {
   }
   
   /// A string for errorLabel
-  open var errorMessage: String? {
+  open var error: String? {
     didSet {
       self.updateControl(true)
     }
   }
-  
-  /// The backing property for the highlighted property
-//  fileprivate var _highlighted = false
-  
-  /// A Boolean value that determines whether the receiver is highlighted. When changing this value, highlighting will be done with animation
-//  override open var isHighlighted: Bool {
-//    get {
-//      print("TKFormTextField[\(placeholder)] GET _highlighted \(_highlighted)")
-//      return _highlighted
-//    }
-//    set {
-//      _highlighted = newValue
-//      print("TKFormTextField[\(placeholder)] SET _highlighted \(_highlighted)")
-//      self.updateTitleColor()
-//      self.updateLineView()
-//    }
-//  }
   
   /// A Boolean value that determines whether the textfield is being edited or is selected.
   open var editingOrSelected: Bool {
@@ -140,9 +150,9 @@ open class TKFormTextField: UITextField {
   }
   
   /// A Boolean value that determines whether the receiver has an error message.
-  open var hasErrorMessage: Bool {
+  open var hasError: Bool {
     get {
-      return self.errorMessage != nil && self.errorMessage != ""
+      return self.error != nil && self.error != ""
     }
   }
   
@@ -175,51 +185,17 @@ open class TKFormTextField: UITextField {
   }
   
   /// The String to display when the textfield is not editing and the input is not empty.
-//  open var title: String? {
-//    didSet {
-//      self.updateControl()
-//    }
-//  }
+  open var title: String? {
+    didSet {
+      self.updateControl()
+    }
+  }
   
   // Determines whether the field is selected. When selected, the title floats above the textbox.
   open override var isSelected: Bool {
     didSet {
       self.updateControl(true)
     }
-  }
-  
-  // MARK: - Initializers
-  
-  override public init(frame: CGRect) {
-    super.init(frame: frame)
-    self.setup()
-  }
-  
-  required public init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-    self.setup()
-  }
-  
-  fileprivate final func setup() {
-    self.borderStyle = .none
-    self.createTitleLabel()
-    self.createErrorLabel()
-    self.createLineView()
-    self.updateColors()
-    self.addEditingChangedObserver()
-    self.updateTextAligment()
-  }
-  
-  fileprivate func addEditingChangedObserver() {
-    self.addTarget(self, action: #selector(tk_editingChanged), for: .editingChanged)
-  }
-  
-  /**
-   Invoked when the editing state of the textfield changes. Override to respond to this change.
-   */
-  open func tk_editingChanged() {
-    updateControl(true)
-    updateTitleLabel(true)
   }
   
   // MARK: create components
@@ -312,7 +288,7 @@ open class TKFormTextField: UITextField {
   }
   
   fileprivate func updateLineColor() {
-    if self.hasErrorMessage {
+    if self.hasError {
       self.lineView.backgroundColor = self.errorColor
     } else {
       self.lineView.backgroundColor = self.editingOrSelected ? self.selectedLineColor : self.lineColor
@@ -325,18 +301,17 @@ open class TKFormTextField: UITextField {
     } else {
       self.titleLabel.textColor = self.titleColor
     }
-    //print("updateTitleColor \(self) \n self.isHighlighted=\(self.isHighlighted)  self.editingOrSelected=\(self.editingOrSelected)")
   }
   
   // MARK: - Title handling
   
   fileprivate func updateTitleLabel(_ animated:Bool = false) {
-    self.titleLabel.text = self.placeholder
+    self.titleLabel.text = self.titleOrPlaceholder()
     self.updateTitleVisibility(animated)
   }
   
   fileprivate func updateErrorLabel(_ animated:Bool = false) {
-    self.errorLabel.text = errorMessage
+    self.errorLabel.text = error
     self.invalidateIntrinsicContentSize()
   }
   
@@ -428,12 +403,12 @@ open class TKFormTextField: UITextField {
   }
   
   open func errorLabelRectForBounds(_ bounds: CGRect) -> CGRect {
-    guard let errorMessage = errorMessage, !errorMessage.isEmpty else { return CGRect.zero }
+    guard let error = error, !error.isEmpty else { return CGRect.zero }
     let font: UIFont = errorLabel.font ?? UIFont.systemFont(ofSize: 17.0)
     
     let textAttributes = [NSFontAttributeName: font]
     let s = CGSize(width: bounds.size.width, height: 2000)
-    let boundingRect = errorMessage.boundingRect(with: s, options: .usesLineFragmentOrigin, attributes: textAttributes, context: nil)
+    let boundingRect = error.boundingRect(with: s, options: .usesLineFragmentOrigin, attributes: textAttributes, context: nil)
     return CGRect(x: 0, y: bounds.size.height - boundingRect.size.height, width: boundingRect.size.width, height: boundingRect.size.height)
   }
   
@@ -483,19 +458,12 @@ open class TKFormTextField: UITextField {
   }
   
   // MARK: - Helpers
-//  fileprivate func titleOrPlaceholder() -> String? {
-//    if let title = self.title ?? self.placeholder {
-//      return title
-//    }
-//    return nil
-//  }
-//  
-//  fileprivate func selectedTitleOrTitlePlaceholder() -> String? {
-//    if let title = self.selectedTitle ?? self.title ?? self.placeholder {
-//      return title
-//    }
-//    return nil
-//  }
+  fileprivate func titleOrPlaceholder() -> String? {
+    if let title = self.title ?? self.placeholder {
+      return title
+    }
+    return nil
+  }
   
   // MARK: Left to right support
   var isLeftToRightLanguage = UIApplication.shared.userInterfaceLayoutDirection == .leftToRight {

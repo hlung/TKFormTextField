@@ -20,27 +20,38 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     self.emailTextField.placeholder = "Email"
-    self.emailTextField.addTarget(self, action: #selector(clearErrorMessageIfNeeded), for: .editingChanged)
-    self.emailTextField.addTarget(self, action: #selector(updateErrorMessage), for: .editingDidEnd)
     self.emailTextField.enablesReturnKeyAutomatically = true
     self.emailTextField.returnKeyType = .next
     self.emailTextField.delegate = self
     
     self.passwordTextField.placeholder = "Password"
-    self.passwordTextField.addTarget(self, action: #selector(clearErrorMessageIfNeeded), for: .editingChanged)
-    self.passwordTextField.addTarget(self, action: #selector(updateErrorMessage), for: .editingDidEnd)
     self.passwordTextField.enablesReturnKeyAutomatically = true
     self.passwordTextField.returnKeyType = .done
     self.passwordTextField.delegate = self
     
-    self.submitButton.isEnabled = isAllTextFieldsValid()
+    // Validation logic
+    self.emailTextField.addTarget(self, action: #selector(clearErrorMessageIfNeeded), for: .editingChanged)
+    self.emailTextField.addTarget(self, action: #selector(updateErrorMessage), for: .editingDidEnd)
+    self.passwordTextField.addTarget(self, action: #selector(clearErrorMessageIfNeeded), for: .editingChanged)
+    self.passwordTextField.addTarget(self, action: #selector(updateErrorMessage), for: .editingDidEnd)
+    
+    // Customize labels
+    self.emailTextField.titleLabel.font = UIFont.systemFont(ofSize: 18)
+    self.emailTextField.font = UIFont.systemFont(ofSize: 18)
+    self.emailTextField.errorLabel.font = UIFont.systemFont(ofSize: 18)
+    self.passwordTextField.titleLabel.font = UIFont.systemFont(ofSize: 18)
+    self.passwordTextField.font = UIFont.systemFont(ofSize: 18)
+    self.passwordTextField.errorLabel.font = UIFont.systemFont(ofSize: 18)
+    
+    // Disable submit button at first
+    self.submitButton.isEnabled = false
   }
   
   func updateErrorMessage(textField: TKFormTextField) {
     if textField == emailTextField {
-      textField.errorMessage = DataValidator.email(text: textField.text)
+      textField.error = DataValidator.email(text: textField.text)
     } else if textField == passwordTextField {
-      textField.errorMessage = DataValidator.password(text: textField.text)
+      textField.error = DataValidator.password(text: textField.text)
     }
     self.submitButton.isEnabled = isAllTextFieldsValid()
   }
@@ -48,17 +59,17 @@ class ViewController: UIViewController {
   func clearErrorMessageIfNeeded(textField: TKFormTextField) {
     if textField == emailTextField {
       if DataValidator.email(text: textField.text) == nil {
-        textField.errorMessage = nil
+        textField.error = nil
       }
     } else if textField == passwordTextField {
       if DataValidator.password(text: textField.text) == nil {
-        textField.errorMessage = nil
+        textField.error = nil
       }
     }
     self.submitButton.isEnabled = isAllTextFieldsValid()
   }
   
-  private func isAllTextFieldsValid() -> Bool {
+  fileprivate func isAllTextFieldsValid() -> Bool {
     guard DataValidator.email(text: emailTextField.text) == nil else { return false }
     guard DataValidator.password(text: passwordTextField.text) == nil else { return false }
     return true
@@ -77,7 +88,7 @@ extension ViewController: UITextFieldDelegate {
     }
     else if (textField == passwordTextField) {
       _ = passwordTextField.resignFirstResponder()
-      if self.submitButton.isEnabled {
+      if isAllTextFieldsValid() {
         submit(submitButton)
       }
     }
