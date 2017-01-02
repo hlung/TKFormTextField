@@ -196,20 +196,21 @@ open class TKFormTextField: UITextField {
     label.font = UIFont.systemFont(ofSize: 13)
     label.alpha = 0.0
     label.textColor = self.titleColor
+    label.accessibilityIdentifier = "title-label"
     self.addSubview(label)
     self.titleLabel = label
   }
   
   fileprivate func createLineView() {
-    
-    if self.lineView == nil {
-      let lineView = UIView()
-      lineView.isUserInteractionEnabled = false
-      self.lineView = lineView
-      self.configureDefaultLineHeight()
-    }
-    lineView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
-    self.addSubview(lineView)
+    let view = UIView()
+    self.lineView = view
+    let onePixel: CGFloat = 1.0 / UIScreen.main.scale
+    self.lineHeight = 2.0 * onePixel // self.lineHeight uses self.lineView so have to set it first
+    self.selectedLineHeight = 2.0 * self.lineHeight
+    view.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+    view.isUserInteractionEnabled = false
+    view.accessibilityIdentifier = "line-view"
+    self.addSubview(view)
   }
   
   fileprivate func createErrorLabel() {
@@ -219,15 +220,9 @@ open class TKFormTextField: UITextField {
     label.alpha = 1.0
     label.numberOfLines = 0
     label.textColor = self.errorColor
-    label.text = "error"
+    label.accessibilityIdentifier = "error-label"
     self.addSubview(label)
     self.errorLabel = label
-  }
-  
-  fileprivate func configureDefaultLineHeight() {
-    let onePixel: CGFloat = 1.0 / UIScreen.main.scale
-    self.lineHeight = 2.0 * onePixel
-    self.selectedLineHeight = 2.0 * self.lineHeight
   }
   
   // MARK: Responder handling
