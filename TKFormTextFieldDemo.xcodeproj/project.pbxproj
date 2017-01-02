@@ -16,6 +16,7 @@
 		E0356E571DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E561DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift */; };
 		E0356E661DEDF44F00C6678C /* TKFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E651DEDF44F00C6678C /* TKFormTextField.swift */; };
 		E048F95A1E19040B00D38A4B /* TKDataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E048F9591E19040B00D38A4B /* TKDataValidator.swift */; };
+		E06AAA6D1E1A505500B5FCB5 /* TKFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E651DEDF44F00C6678C /* TKFormTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -292,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E06AAA6D1E1A505500B5FCB5 /* TKFormTextField.swift in Sources */,
 				E0356E571DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

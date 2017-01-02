@@ -30,7 +30,33 @@ class TKFormTextFieldDemoUITests: XCTestCase {
     
     func testExample() {
         // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+      
+      let app = XCUIApplication()
+      let submitButton = app.buttons["submit-button"]
+      
+      let emailTextfieldTextField = app.textFields["email-textfield"]
+      emailTextfieldTextField.tap()
+      emailTextfieldTextField.typeText("bademail")
+      XCTAssertFalse(submitButton.isEnabled)
+      
+//      app.typeText("\r")
+      // Somehow I still cannot find the error label T_T
+//      XCTAssert(emailTextfieldTextField.staticTexts["Email is invalid."].exists)
+      
+      emailTextfieldTextField.tap()
+      app.buttons["Clear text"].tap()
+      emailTextfieldTextField.typeText("john@apple.com")
+      XCTAssertFalse(submitButton.isEnabled)
+      
+      let passwordTextfieldSecureTextField = app.secureTextFields["password-textfield"]
+      passwordTextfieldSecureTextField.tap()
+      
+      passwordTextfieldSecureTextField.typeText("12345")
+      XCTAssertFalse(submitButton.isEnabled)
+      
+      app.buttons["Clear text"].tap()
+      passwordTextfieldSecureTextField.typeText("123456")
+      XCTAssert(submitButton.isEnabled)
     }
     
 }

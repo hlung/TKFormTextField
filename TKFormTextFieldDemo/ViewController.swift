@@ -46,6 +46,10 @@ class ViewController: UIViewController {
     
     // Disable submitButton at start
     self.submitButton.isEnabled = false
+    
+    self.emailTextField.accessibilityIdentifier = "email-textfield"
+    self.passwordTextField.accessibilityIdentifier = "password-textfield"
+    self.submitButton.accessibilityIdentifier = "submit-button"
   }
   
   func addTargetForErrorUpdating(_ textField: TKFormTextField) {
