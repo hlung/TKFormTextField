@@ -15,7 +15,7 @@
 		E0356E4C1DEDF3B200C6678C /* TKFormTextFieldDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E4B1DEDF3B200C6678C /* TKFormTextFieldDemoTests.swift */; };
 		E0356E571DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E561DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift */; };
 		E0356E661DEDF44F00C6678C /* TKFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E651DEDF44F00C6678C /* TKFormTextField.swift */; };
-		E048F95A1E19040B00D38A4B /* DataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E048F9591E19040B00D38A4B /* DataValidator.swift */; };
+		E048F95A1E19040B00D38A4B /* TKDataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E048F9591E19040B00D38A4B /* TKDataValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		E0356E561DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKFormTextFieldDemoUITests.swift; sourceTree = "<group>"; };
 		E0356E581DEDF3B200C6678C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0356E651DEDF44F00C6678C /* TKFormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKFormTextField.swift; sourceTree = "<group>"; };
-		E048F9591E19040B00D38A4B /* DataValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataValidator.swift; sourceTree = "<group>"; };
+		E048F9591E19040B00D38A4B /* TKDataValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKDataValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 			children = (
 				E0356E361DEDF3B200C6678C /* AppDelegate.swift */,
 				E0356E381DEDF3B200C6678C /* ViewController.swift */,
-				E048F9591E19040B00D38A4B /* DataValidator.swift */,
+				E048F9591E19040B00D38A4B /* TKDataValidator.swift */,
 				E0356E3A1DEDF3B200C6678C /* Main.storyboard */,
 				E0356E3D1DEDF3B200C6678C /* Assets.xcassets */,
 				E0356E3F1DEDF3B200C6678C /* LaunchScreen.storyboard */,
@@ -275,7 +275,7 @@
 			files = (
 				E0356E391DEDF3B200C6678C /* ViewController.swift in Sources */,
 				E0356E371DEDF3B200C6678C /* AppDelegate.swift in Sources */,
-				E048F95A1E19040B00D38A4B /* DataValidator.swift in Sources */,
+				E048F95A1E19040B00D38A4B /* TKDataValidator.swift in Sources */,
 				E0356E661DEDF44F00C6678C /* TKFormTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

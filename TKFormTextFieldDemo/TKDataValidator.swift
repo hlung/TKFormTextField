@@ -1,5 +1,5 @@
 //
-//  DataValidator.swift
+//  TKDataValidator.swift
 //  TKFormTextFieldDemo
 //
 //  Created by Thongchai Kolyutsakul on 1/1/17.
@@ -11,7 +11,7 @@ import Foundation
 // Stores functions that validates input text.
 // Each function takes a text.
 // Returns an error string if that text is invalid, or nil if valid.
-class DataValidator {
+class TKDataValidator {
   class func email(text: String?) -> String? {
     guard let text = text, !text.isEmpty else {
       return "Email is missing."
