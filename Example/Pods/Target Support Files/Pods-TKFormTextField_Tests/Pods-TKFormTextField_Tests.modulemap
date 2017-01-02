@@ -1,0 +1,6 @@
+framework module Pods_TKFormTextField_Tests {
+  umbrella header "Pods-TKFormTextField_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

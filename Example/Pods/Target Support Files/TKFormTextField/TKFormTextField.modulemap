@@ -1,0 +1,6 @@
+framework module TKFormTextField {
+  umbrella header "TKFormTextField-umbrella.h"
+
+  export *
+  module * { export * }
+}
