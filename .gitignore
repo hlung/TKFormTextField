@@ -1,6 +1,13 @@
 # OS X
 .DS_Store
 
+# opendiff merge
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*.BACKUP.*
+*.orig
+
 # Xcode
 build/
 *.pbxuser
