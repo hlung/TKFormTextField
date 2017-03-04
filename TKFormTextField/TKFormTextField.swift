@@ -16,7 +16,6 @@ import UIKit
 open class TKFormTextField: UITextField {
   
   // MARK: - Initializers
-  
   override public init(frame: CGRect) {
     super.init(frame: frame)
     self.setup()
