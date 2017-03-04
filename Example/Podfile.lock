@@ -1,0 +1,16 @@
+PODS:
+  - TKFormTextField (0.1.0)
+
+DEPENDENCIES:
+  - TKFormTextField (from `../`)
+
+EXTERNAL SOURCES:
+  TKFormTextField:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TKFormTextField: 848afb0aca13de53c47db8b4e14fbb1c3bbfc055
+
+PODFILE CHECKSUM: c1b0bd39c2f057e7676ce4a824b1a8051b0b4ddd
+
+COCOAPODS: 1.1.1
