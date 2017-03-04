@@ -50,6 +50,13 @@ class ViewController: UIViewController {
     self.emailTextField.accessibilityIdentifier = "email-textfield"
     self.passwordTextField.accessibilityIdentifier = "password-textfield"
     self.submitButton.accessibilityIdentifier = "submit-button"
+    
+    let tapBackground = UITapGestureRecognizer(target: self, action: #selector(onTapBackground))
+    self.view.addGestureRecognizer(tapBackground)
+  }
+  
+  func onTapBackground() {
+    self.view.endEditing(true)
   }
   
   func addTargetForErrorUpdating(_ textField: TKFormTextField) {
