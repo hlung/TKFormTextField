@@ -1,5 +1,7 @@
 # TKFormTextField
 
+[![Build Status](https://travis-ci.org/hlung/TKFormTextField.svg?branch=master)](https://travis-ci.org/hlung/TKFormTextField)
+
 ![Demo](/README/demo.gif)
 
 A UITextField subclass which:
