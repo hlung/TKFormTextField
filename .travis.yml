@@ -5,7 +5,7 @@
 osx_image: xcode8.2
 language: swift
 xcode_project: TKFormTextFieldDemo
-xcode_scheme: TKFormTextFieldDemo
+xcode_scheme: TKFormTextFieldDemoUITests
 
 # cache: cocoapods
 # podfile: Example/Podfile
