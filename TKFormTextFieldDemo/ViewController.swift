@@ -83,9 +83,11 @@ class ViewController: UIViewController {
   private func validationError(_ textField: TKFormTextField) -> String? {
     if textField == emailTextField {
       return TKDataValidator.email(text: textField.text)
-    } else {
+    }
+    if textField == passwordTextField {
       return TKDataValidator.password(text: textField.text)
     }
+    return nil
   }
   
   @IBAction func submit(_ sender: Any) {
