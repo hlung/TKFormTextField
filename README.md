@@ -80,6 +80,8 @@ For text input forms, using alerts for showing error is too intrusive, makes use
 
 Note that I am not using IBInspectable / IBDesignable because I feel it is slow and buggy. Moreover, since you usually have several text fields across your app, I think it is easier to customize this in code.
 
+This is inspired by https://github.com/Skyscanner/SkyFloatingLabelTextField
+
 ## License
 
 TKFormTextField is available under the MIT license. See the LICENSE file for more info.
