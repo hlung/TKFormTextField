@@ -55,10 +55,10 @@ class ViewController: UIViewController {
 
   func updateError(textField: TKFormTextField) {
     guard let text = textField.text, !text.isEmpty else {
-      textField.error = "Text is empty!" // to shows error message in errorLabel, or
+      textField.error = "Text is empty!" // to show error message in errorLabel
       return
     }
-    textField.error = nil // to removes the error message
+    textField.error = nil // to remove the error message
   }
 }
 ```
