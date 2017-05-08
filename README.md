@@ -65,14 +65,18 @@ class ViewController: UIViewController {
 
 ## Installation
 
-TKFormTextField is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+TKFormTextField is available through CocoaPods and Carthage.
 
+[CocoaPods](http://cocoapods.org), add this to your Podfile:
 ```ruby
 pod "TKFormTextField"
 ```
-
 Note: To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+Carthage
+```ruby
+github "hlung/TKFormTextField"
+```
 
 ## Story
 
