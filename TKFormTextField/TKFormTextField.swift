@@ -463,7 +463,7 @@ open class TKFormTextField: UITextField {
   }
   
   open override var description: String {
-    return "[TKFormTextField(\(placeholder)) text:\(text)]"
+    return "[TKFormTextField(\(String(describing: placeholder))) text:\(String(describing: text))]"
   }
   
 }
