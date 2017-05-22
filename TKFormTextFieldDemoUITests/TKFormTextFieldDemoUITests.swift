@@ -9,28 +9,34 @@
 import XCTest
 
 class TKFormTextFieldDemoUITests: XCTestCase {
-        
-    override func setUp() {
-        super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+  
+  override func setUp() {
+    super.setUp()
+    
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    // In UI tests it is usually best to stop immediately when a failure occurs.
+    continueAfterFailure = false
+    // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
+    if #available(iOS 9.0, *) {
+      XCUIApplication().launch()
+    } else {
+      // Fallback on earlier versions
+      XCTAssert(false)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
+    // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+  }
+  
+  override func tearDown() {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    super.tearDown()
+  }
+  
+  func testExample() {
+    // Use recording to get started writing UI tests.
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-      
+    if #available(iOS 9.0, *) {
       let app = XCUIApplication()
       let submitButton = app.buttons["submit-button"]
       
@@ -39,9 +45,9 @@ class TKFormTextFieldDemoUITests: XCTestCase {
       emailTextfieldTextField.typeText("bademail")
       XCTAssertFalse(submitButton.isEnabled)
       
-//      app.typeText("\r")
+      //      app.typeText("\r")
       // Somehow I still cannot find the error label T_T
-//      XCTAssert(emailTextfieldTextField.staticTexts["Email is invalid."].exists)
+      //      XCTAssert(emailTextfieldTextField.staticTexts["Email is invalid."].exists)
       
       emailTextfieldTextField.tap()
       app.buttons["Clear text"].tap()
@@ -57,6 +63,11 @@ class TKFormTextFieldDemoUITests: XCTestCase {
       app.buttons["Clear text"].tap()
       passwordTextfieldSecureTextField.typeText("123456")
       XCTAssert(submitButton.isEnabled)
+    } else {
+      // Fallback on earlier versions
+      XCTAssert(false)
     }
     
+  }
+  
 }
