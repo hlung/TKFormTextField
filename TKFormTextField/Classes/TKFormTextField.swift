@@ -5,7 +5,6 @@
 //  A UITextField whose placeholder text moves up when text is entered.
 //  There's also an underline, and a multi-line error text can be displayed below.
 //  Set error to show/hide error and trigger error coloring.
-//  Credit: https://github.com/Skyscanner/SkyFloatingLabelTextField
 //
 //  Created by Thongchai Kolyutsakul on 30/11/16.
 //  Copyright © 2016 Thongchai Kolyutsakul. All rights reserved.
@@ -16,7 +15,6 @@ import UIKit
 open class TKFormTextField: UITextField {
   
   // MARK: - Initializers
-  
   override public init(frame: CGRect) {
     super.init(frame: frame)
     self.setup()
@@ -465,7 +463,7 @@ open class TKFormTextField: UITextField {
   }
   
   open override var description: String {
-    return "[TKFormTextField(\(placeholder)) text:\(text)]"
+    return "[TKFormTextField(\(String(describing: placeholder))) text:\(String(describing: text))]"
   }
   
 }

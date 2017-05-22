@@ -15,8 +15,8 @@
 		E0356E4C1DEDF3B200C6678C /* TKFormTextFieldDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E4B1DEDF3B200C6678C /* TKFormTextFieldDemoTests.swift */; };
 		E0356E571DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E561DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift */; };
 		E0356E661DEDF44F00C6678C /* TKFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E651DEDF44F00C6678C /* TKFormTextField.swift */; };
-		E048F95A1E19040B00D38A4B /* TKDataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E048F9591E19040B00D38A4B /* TKDataValidator.swift */; };
 		E06AAA6D1E1A505500B5FCB5 /* TKFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E651DEDF44F00C6678C /* TKFormTextField.swift */; };
+		E0AB0E2C1ED2A460000E28E0 /* TKDataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AB0E2B1ED2A460000E28E0 /* TKDataValidator.swift */; };
 		E0CF02C21EC0502D00490CA0 /* TKFormTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = E0CF02C01EC0502D00490CA0 /* TKFormTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0CF02C51EC0502D00490CA0 /* TKFormTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CF02BE1EC0502D00490CA0 /* TKFormTextField.framework */; };
 		E0CF02C61EC0502D00490CA0 /* TKFormTextField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0CF02BE1EC0502D00490CA0 /* TKFormTextField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -75,8 +75,8 @@
 		E0356E521DEDF3B200C6678C /* TKFormTextFieldDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TKFormTextFieldDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0356E561DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKFormTextFieldDemoUITests.swift; sourceTree = "<group>"; };
 		E0356E581DEDF3B200C6678C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0356E651DEDF44F00C6678C /* TKFormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKFormTextField.swift; sourceTree = "<group>"; };
-		E048F9591E19040B00D38A4B /* TKDataValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKDataValidator.swift; sourceTree = "<group>"; };
+		E0356E651DEDF44F00C6678C /* TKFormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TKFormTextField.swift; path = Classes/TKFormTextField.swift; sourceTree = "<group>"; };
+		E0AB0E2B1ED2A460000E28E0 /* TKDataValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKDataValidator.swift; sourceTree = "<group>"; };
 		E0CF02BE1EC0502D00490CA0 /* TKFormTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TKFormTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CF02C01EC0502D00490CA0 /* TKFormTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKFormTextField.h; sourceTree = "<group>"; };
 		E0CF02C11EC0502D00490CA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 			children = (
 				E0356E361DEDF3B200C6678C /* AppDelegate.swift */,
 				E0356E381DEDF3B200C6678C /* ViewController.swift */,
-				E048F9591E19040B00D38A4B /* TKDataValidator.swift */,
+				E0AB0E2B1ED2A460000E28E0 /* TKDataValidator.swift */,
 				E0356E3A1DEDF3B200C6678C /* Main.storyboard */,
 				E0356E3D1DEDF3B200C6678C /* Assets.xcassets */,
 				E0356E3F1DEDF3B200C6678C /* LaunchScreen.storyboard */,
@@ -366,8 +366,8 @@
 			files = (
 				E0356E391DEDF3B200C6678C /* ViewController.swift in Sources */,
 				E0356E371DEDF3B200C6678C /* AppDelegate.swift in Sources */,
-				E048F95A1E19040B00D38A4B /* TKDataValidator.swift in Sources */,
 				E0356E661DEDF44F00C6678C /* TKFormTextField.swift in Sources */,
+				E0AB0E2C1ED2A460000E28E0 /* TKDataValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +707,7 @@
 				E0CF02C91EC0502D00490CA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
