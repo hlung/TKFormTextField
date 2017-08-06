@@ -431,6 +431,10 @@ open class TKFormTextField: UITextField {
     self.titleLabel.frame = self.titleLabelRectForBounds(self.bounds, editing: self.isTitleVisible() || _renderingInInterfaceBuilder)
     self.errorLabel.frame = self.errorLabelRectForBounds(self.bounds)
     self.lineView.frame = self.lineViewRectForBounds(self.bounds, editing: self.editingOrSelected || _renderingInInterfaceBuilder)
+
+    // Fix unwanted rightView sliding in animation when it's first shown
+    // https://stackoverflow.com/questions/18853972/how-to-stop-the-animation-of-uitextfield-rightview
+    rightView?.frame = rightViewRect(forBounds: bounds)
   }
   
   override open var intrinsicContentSize: CGSize {
