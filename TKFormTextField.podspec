@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TKFormTextField'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'A UITextField subclass with built-in bottom error label, top floating label while editing, and an underline.'
 
 # This description is used to generate tags and improve search results.
