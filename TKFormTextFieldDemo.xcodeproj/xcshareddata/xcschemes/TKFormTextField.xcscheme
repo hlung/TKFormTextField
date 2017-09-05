@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E0356E461DEDF3B200C6678C"
+               BuildableName = "TKFormTextFieldDemoTests.xctest"
+               BlueprintName = "TKFormTextFieldDemoTests"
+               ReferencedContainer = "container:TKFormTextFieldDemo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
