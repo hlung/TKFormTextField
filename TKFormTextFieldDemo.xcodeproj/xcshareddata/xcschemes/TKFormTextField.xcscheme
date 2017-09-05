@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E0CF02BD1EC0502D00490CA0"
-               BuildableName = "TKFormTextField.framework"
-               BlueprintName = "TKFormTextField"
+               BlueprintIdentifier = "E0356E321DEDF3B200C6678C"
+               BuildableName = "TKFormTextFieldDemo.app"
+               BlueprintName = "TKFormTextFieldDemo"
                ReferencedContainer = "container:TKFormTextFieldDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -30,6 +30,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E0356E321DEDF3B200C6678C"
+            BuildableName = "TKFormTextFieldDemo.app"
+            BlueprintName = "TKFormTextFieldDemo"
+            ReferencedContainer = "container:TKFormTextFieldDemo.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -44,15 +53,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E0CF02BD1EC0502D00490CA0"
-            BuildableName = "TKFormTextField.framework"
-            BlueprintName = "TKFormTextField"
+            BlueprintIdentifier = "E0356E321DEDF3B200C6678C"
+            BuildableName = "TKFormTextFieldDemo.app"
+            BlueprintName = "TKFormTextFieldDemo"
             ReferencedContainer = "container:TKFormTextFieldDemo.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -65,9 +75,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E0CF02BD1EC0502D00490CA0"
-            BuildableName = "TKFormTextField.framework"
-            BlueprintName = "TKFormTextField"
+            BlueprintIdentifier = "E0356E321DEDF3B200C6678C"
+            BuildableName = "TKFormTextFieldDemo.app"
+            BlueprintName = "TKFormTextFieldDemo"
             ReferencedContainer = "container:TKFormTextFieldDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
