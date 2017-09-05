@@ -35,7 +35,7 @@ open class TKFormTextField: UITextField {
     self.addTarget(self, action: #selector(tk_editingChanged), for: .editingChanged)
   }
   
-  open func tk_editingChanged() {
+  @objc open func tk_editingChanged() {
     updateControl(true)
     updateTitleLabel(true)
   }
@@ -260,7 +260,7 @@ open class TKFormTextField: UITextField {
   
   fileprivate func updatePlaceholder() {
     if let placeholder = self.titleOrPlaceholder(), let font = self.placeholderFont ?? self.font {
-      let attributes: [String: Any] = [NSForegroundColorAttributeName: placeholderColor, NSFontAttributeName: font]
+      let attributes: [NSAttributedStringKey: Any] = [NSAttributedStringKey.foregroundColor: placeholderColor, NSAttributedStringKey.font: font]
       self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attributes)
     }
   }
@@ -388,7 +388,7 @@ open class TKFormTextField: UITextField {
     guard let error = error, !error.isEmpty else { return CGRect.zero }
     let font: UIFont = errorLabel.font ?? UIFont.systemFont(ofSize: 17.0)
     
-    let textAttributes = [NSFontAttributeName: font]
+    let textAttributes = [NSAttributedStringKey.font: font]
     let s = CGSize(width: bounds.size.width, height: 2000)
     let boundingRect = error.boundingRect(with: s, options: .usesLineFragmentOrigin, attributes: textAttributes, context: nil)
     return CGRect(x: 0, y: bounds.size.height - boundingRect.size.height, width: boundingRect.size.width, height: boundingRect.size.height)
