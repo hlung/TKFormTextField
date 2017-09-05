@@ -55,7 +55,7 @@ class ViewController: UIViewController {
     self.view.addGestureRecognizer(tapBackground)
   }
   
-  func onTapBackground() {
+  @objc func onTapBackground() {
     self.view.endEditing(true)
   }
   
@@ -64,12 +64,12 @@ class ViewController: UIViewController {
     textField.addTarget(self, action: #selector(updateError), for: .editingDidEnd)
   }
   
-  func updateError(textField: TKFormTextField) {
+  @objc func updateError(textField: TKFormTextField) {
     textField.error = validationError(textField)
     self.submitButton.isEnabled = isAllTextFieldsValid()
   }
   
-  func clearErrorIfNeeded(textField: TKFormTextField) {
+  @objc func clearErrorIfNeeded(textField: TKFormTextField) {
     if validationError(textField) == nil {
       textField.error = nil
     }
