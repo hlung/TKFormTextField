@@ -11,10 +11,10 @@ A UITextField subclass which:
 - you can customize unselected/selected color for the floating placeholder
 - you can customize unselected/selected color and thickness for the underline
 
-## Supported System
+## System requirements
 
-- iOS 8.0
-- Swift 4, Swift 3 (until 0.1.6)
+- iOS 8.0 or newer
+- Swift 4. (If you need Swift 3, use my version 0.1.6.)
 
 ## Example
 
