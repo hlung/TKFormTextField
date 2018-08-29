@@ -5,7 +5,7 @@
 ![Demo](/README/demo.gif)
 
 A UITextField subclass which:
-- has a built-in error UILabel right below
+- has a built-in UILabel below for showing an error message
 - floats placeholder up when text is entered
 - has an underline
 - you can customize unselected/selected color for the floating placeholder
