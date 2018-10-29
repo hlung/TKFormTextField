@@ -2,9 +2,9 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode8.2
+#osx_image: xcode10 #commented out to just use the default image, so we don't have to keep upgrading it
 language: swift
-xcode_project: TKFormTextFieldDemo
+xcode_project: TKFormTextFieldDemo.xcodeproj
 xcode_scheme: TKFormTextFieldDemoUITests
 
 # cache: cocoapods
