@@ -135,7 +135,7 @@ open class TKFormTextField: UITextField {
   // A Boolean value that determines whether the textfield is being edited or is selected.
   open var editingOrSelected: Bool {
     get {
-      return super.isEditing || self.isSelected;
+      return super.isEditing || self.isSelected
     }
   }
   
@@ -326,7 +326,7 @@ open class TKFormTextField: UITextField {
       self.titleLabel.frame = frame
     }
     if animated {
-      let animationOptions:UIView.AnimationOptions = .curveEaseOut;
+      let animationOptions: UIView.AnimationOptions = .curveEaseOut
       let duration = self.isTitleVisible() ? titleFadeInDuration : titleFadeOutDuration
       
       UIView.animate(withDuration: duration, delay: 0, options: animationOptions, animations: { () -> Void in
@@ -381,7 +381,7 @@ open class TKFormTextField: UITextField {
   
   open func lineViewRectForBounds(_ bounds: CGRect, editing:Bool) -> CGRect {
     let lineHeight: CGFloat = editing ? CGFloat(self.selectedLineHeight) : CGFloat(self.lineHeight)
-    return CGRect(x: 0, y: bounds.size.height - lineHeight - errorHeight(), width: bounds.size.width, height: lineHeight);
+    return CGRect(x: 0, y: bounds.size.height - lineHeight - errorHeight(), width: bounds.size.width, height: lineHeight)
   }
   
   open func errorLabelRectForBounds(_ bounds: CGRect) -> CGRect {
