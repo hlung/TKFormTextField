@@ -23,7 +23,7 @@ class TKDataValidator {
   }
   
   class func password(text: String?) -> String? {
-    guard let text = text, text.characters.count >= 6 else {
+    guard let text = text, text.count >= 6 else {
       return "Password is invalid."
     }
     return nil
