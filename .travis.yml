@@ -5,7 +5,9 @@
 osx_image: xcode10
 language: swift
 script:
-- xcodebuild -project TKFormTextFieldDemo.xcodeproj -target TKFormTextFieldDemoUITests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- set -o pipefail && xcodebuild test -project TKFormTextFieldDemo.xcodeproj -scheme TKFormTextFieldDemoUITests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
+# - set -o pipefail && xcodebuild -project TKFormTextFieldDemo.xcodeproj -scheme TKFormTextField -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
+
 
 # cache: cocoapods
 # podfile: Example/Podfile
