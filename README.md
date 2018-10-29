@@ -14,7 +14,7 @@ A UITextField subclass which:
 ## System requirements
 
 - iOS 8.0 or newer
-- Swift 4.2 -> 0.3.0
+- Swift 4.2 -> latest
 - Swift 4.0 -> 0.2.0
 - Swift 3.0 -> 0.1.6
 
