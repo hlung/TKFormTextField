@@ -260,7 +260,7 @@ open class TKFormTextField: UITextField {
   
   fileprivate func updatePlaceholder() {
     if let placeholder = self.titleOrPlaceholder(), let font = self.placeholderFont ?? self.font {
-      let attributes: [NSAttributedStringKey: Any] = [NSAttributedStringKey.foregroundColor: placeholderColor, NSAttributedStringKey.font: font]
+      let attributes: [NSAttributedString.Key: Any] = [.foregroundColor: placeholderColor, .font: font]
       self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attributes)
     }
   }
@@ -326,7 +326,7 @@ open class TKFormTextField: UITextField {
       self.titleLabel.frame = frame
     }
     if animated {
-      let animationOptions:UIViewAnimationOptions = .curveEaseOut;
+      let animationOptions:UIView.AnimationOptions = .curveEaseOut;
       let duration = self.isTitleVisible() ? titleFadeInDuration : titleFadeOutDuration
       
       UIView.animate(withDuration: duration, delay: 0, options: animationOptions, animations: { () -> Void in
@@ -388,7 +388,7 @@ open class TKFormTextField: UITextField {
     guard let error = error, !error.isEmpty else { return CGRect.zero }
     let font: UIFont = errorLabel.font ?? UIFont.systemFont(ofSize: 17.0)
     
-    let textAttributes = [NSAttributedStringKey.font: font]
+    let textAttributes = [NSAttributedString.Key.font: font]
     let s = CGSize(width: bounds.size.width, height: 2000)
     let boundingRect = error.boundingRect(with: s, options: .usesLineFragmentOrigin, attributes: textAttributes, context: nil)
     return CGRect(x: 0, y: bounds.size.height - boundingRect.size.height, width: boundingRect.size.width, height: boundingRect.size.height)

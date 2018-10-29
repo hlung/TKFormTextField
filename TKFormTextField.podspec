@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TKFormTextField'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'A UITextField subclass with built-in bottom error label, top floating label while editing, and an underline.'
   s.description      = 'I want to add the ability to keep placeholder text and show error message near each UITextField. Using alert for showing error is too intrusive, makes user lost context of which field is wrong, and require another tap to dismiss. So I want to add this functionality right into UITextField.'
   s.homepage         = 'https://github.com/hlung/TKFormTextField'
