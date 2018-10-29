@@ -286,10 +286,12 @@
 				TargetAttributes = {
 					E0356E321DEDF3B200C6678C = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					E0356E461DEDF3B200C6678C = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E0356E321DEDF3B200C6678C;
 					};
@@ -300,7 +302,7 @@
 					};
 					E0CF02BD1EC0502D00490CA0 = {
 						CreatedOnToolsVersion = 8.3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -558,7 +560,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = th.in.hlung.TKFormTextFieldDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -572,7 +574,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = th.in.hlung.TKFormTextFieldDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -585,7 +587,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hlung.TKFormTextFieldDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TKFormTextFieldDemo.app/TKFormTextFieldDemo";
 			};
 			name = Debug;
@@ -599,7 +601,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hlung.TKFormTextFieldDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TKFormTextFieldDemo.app/TKFormTextFieldDemo";
 			};
 			name = Release;
@@ -648,7 +650,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = th.in.hlung.TKFormTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -672,7 +674,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = th.in.hlung.TKFormTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
