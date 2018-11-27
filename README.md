@@ -28,7 +28,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    // normal UITextField properties
+    // UITextField traditional properties
     self.emailTextField.placeholder = "Email"
     self.emailTextField.enablesReturnKeyAutomatically = true
     self.emailTextField.returnKeyType = .next
@@ -36,20 +36,20 @@ class ViewController: UIViewController {
     self.emailTextField.placeholderFont = UIFont.systemFont(ofSize: 18)
     self.emailTextField.font = UIFont.systemFont(ofSize: 18)
 
-    // floating placeholder title
+    // TKFormTextField floating placeholder title
     self.emailTextField.titleLabel.font = UIFont.systemFont(ofSize: 18)
     self.emailTextField.titleColor = UIColor.lightGray
     self.emailTextField.selectedTitleColor = UIColor.gray
 
-    // underline
+    // TKFormTextField underline
     self.emailTextField.lineColor = UIColor.gray
     self.emailTextField.selectedLineColor = UIColor.black
     
-    // bottom error label
+    // TKFormTextField bottom error label
     self.emailTextField.errorLabel.font = UIFont.systemFont(ofSize: 18)
     self.emailTextField.errorColor = UIColor.red // this color is also used for the underline on error state
 
-    // update error message
+    // TKFormTextField update error message
     // NOTE: Ideally you should show error on .editingDidEnd, and attempt to hide it on .editingChanged.
     // See TKFormTextFieldDemo.xcodeproj on how I design the validation flow.
     self.emailTextField.addTarget(self, action: #selector(updateError), for: .editingChanged)
