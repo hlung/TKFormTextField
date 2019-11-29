@@ -88,6 +88,7 @@ Note that I am not using IBInspectable / IBDesignable because I feel it is slow 
 
 This is inspired by https://github.com/Skyscanner/SkyFloatingLabelTextField
 
-## License
+## TODO
 
-TKFormTextField is available under the MIT license. See the LICENSE file for more info.
+- Support RTL
+- Support Swift Package Manager, or other dependency managers
