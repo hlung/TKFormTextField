@@ -36,22 +36,22 @@ class ViewController: UIViewController {
     self.emailTextField.placeholderFont = UIFont.systemFont(ofSize: 18)
     self.emailTextField.font = UIFont.systemFont(ofSize: 18)
 
-    // TKFormTextField floating placeholder title
+    // UITextField properties: floating placeholder title
     self.emailTextField.titleLabel.font = UIFont.systemFont(ofSize: 18)
     self.emailTextField.titleColor = UIColor.lightGray
     self.emailTextField.selectedTitleColor = UIColor.gray
 
-    // TKFormTextField underline
+    // UITextField properties: underline
     self.emailTextField.lineColor = UIColor.gray
     self.emailTextField.selectedLineColor = UIColor.black
     
-    // TKFormTextField bottom error label
+    // UITextField properties: bottom error label
     self.emailTextField.errorLabel.font = UIFont.systemFont(ofSize: 18)
     self.emailTextField.errorColor = UIColor.red // this color is also used for the underline on error state
 
-    // TKFormTextField update error message
+    // UITextField properties: update error message
     // NOTE: Ideally you should show error on .editingDidEnd, and attempt to hide it on .editingChanged.
-    // See TKFormTextFieldDemo.xcodeproj on how I design the validation flow.
+    // See the demo project on how I design the validation flow.
     self.emailTextField.addTarget(self, action: #selector(updateError), for: .editingChanged)
   }
 
