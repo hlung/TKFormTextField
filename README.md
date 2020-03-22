@@ -84,11 +84,16 @@ github "hlung/TKFormTextField"
 
 For text input forms, using alerts for showing error is too intrusive, makes user lost context of which field is wrong, and require another tap to dismiss. And you can only show one at a time. I think TKFormTextField is the answer to text input form UI.
 
-Note that I am not using IBInspectable / IBDesignable because I feel it is slow and buggy. Moreover, since you usually have several text fields across your app, I think it is easier to customize this in code.
+Note that I am not using IBInspectable / IBDesignable because I feel it is slow and buggy. Moreover, since you usually have several text fields across the app, using code is easier to duplicate and customize.
 
 This is inspired by https://github.com/Skyscanner/SkyFloatingLabelTextField
+
+## Used by
+
+- [Rakuten Viki iOS app](https://apps.apple.com/us/app/viki-asian-tv-dramas-movies/id445553058) in login page
 
 ## TODO
 
 - Support RTL
 - Support Swift Package Manager, or other dependency managers
+- Animate error message below
