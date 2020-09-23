@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01CD0F3F251B5DF800AC40E9 /* TKFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD0F3D251B5DF800AC40E9 /* TKFormTextField.swift */; };
+		01CD0F47251B5E1400AC40E9 /* TKFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD0F3D251B5DF800AC40E9 /* TKFormTextField.swift */; };
+		01CD0F56251B5E1700AC40E9 /* TKFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD0F3D251B5DF800AC40E9 /* TKFormTextField.swift */; };
 		E0356E371DEDF3B200C6678C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E361DEDF3B200C6678C /* AppDelegate.swift */; };
 		E0356E391DEDF3B200C6678C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E381DEDF3B200C6678C /* ViewController.swift */; };
 		E0356E3C1DEDF3B200C6678C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0356E3A1DEDF3B200C6678C /* Main.storyboard */; };
@@ -14,13 +17,10 @@
 		E0356E411DEDF3B200C6678C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0356E3F1DEDF3B200C6678C /* LaunchScreen.storyboard */; };
 		E0356E4C1DEDF3B200C6678C /* TKFormTextFieldDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E4B1DEDF3B200C6678C /* TKFormTextFieldDemoTests.swift */; };
 		E0356E571DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E561DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift */; };
-		E0356E661DEDF44F00C6678C /* TKFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E651DEDF44F00C6678C /* TKFormTextField.swift */; };
-		E06AAA6D1E1A505500B5FCB5 /* TKFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E651DEDF44F00C6678C /* TKFormTextField.swift */; };
 		E0AB0E2C1ED2A460000E28E0 /* TKDataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AB0E2B1ED2A460000E28E0 /* TKDataValidator.swift */; };
 		E0CF02C21EC0502D00490CA0 /* TKFormTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = E0CF02C01EC0502D00490CA0 /* TKFormTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0CF02C51EC0502D00490CA0 /* TKFormTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CF02BE1EC0502D00490CA0 /* TKFormTextField.framework */; };
 		E0CF02C61EC0502D00490CA0 /* TKFormTextField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0CF02BE1EC0502D00490CA0 /* TKFormTextField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E0CF02CB1EC0504800490CA0 /* TKFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0356E651DEDF44F00C6678C /* TKFormTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01CD0F3D251B5DF800AC40E9 /* TKFormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKFormTextField.swift; sourceTree = "<group>"; };
 		E0356E331DEDF3B200C6678C /* TKFormTextFieldDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKFormTextFieldDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0356E361DEDF3B200C6678C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0356E381DEDF3B200C6678C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		E0356E521DEDF3B200C6678C /* TKFormTextFieldDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TKFormTextFieldDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0356E561DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKFormTextFieldDemoUITests.swift; sourceTree = "<group>"; };
 		E0356E581DEDF3B200C6678C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0356E651DEDF44F00C6678C /* TKFormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TKFormTextField.swift; path = Classes/TKFormTextField.swift; sourceTree = "<group>"; };
 		E0AB0E2B1ED2A460000E28E0 /* TKDataValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKDataValidator.swift; sourceTree = "<group>"; };
 		E0CF02BE1EC0502D00490CA0 /* TKFormTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TKFormTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CF02C01EC0502D00490CA0 /* TKFormTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKFormTextField.h; sourceTree = "<group>"; };
@@ -115,10 +115,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01CD0F3B251B5DF800AC40E9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				01CD0F3C251B5DF800AC40E9 /* TKFormTextField */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		01CD0F3C251B5DF800AC40E9 /* TKFormTextField */ = {
+			isa = PBXGroup;
+			children = (
+				01CD0F3D251B5DF800AC40E9 /* TKFormTextField.swift */,
+			);
+			path = TKFormTextField;
+			sourceTree = "<group>";
+		};
 		E0356E2A1DEDF3B200C6678C = {
 			isa = PBXGroup;
 			children = (
-				E0356E641DEDF43F00C6678C /* TKFormTextField */,
+				01CD0F3B251B5DF800AC40E9 /* Sources */,
 				E0356E351DEDF3B200C6678C /* TKFormTextFieldDemo */,
 				E0356E4A1DEDF3B200C6678C /* TKFormTextFieldDemoTests */,
 				E0356E551DEDF3B200C6678C /* TKFormTextFieldDemoUITests */,
@@ -168,14 +184,6 @@
 				E0356E581DEDF3B200C6678C /* Info.plist */,
 			);
 			path = TKFormTextFieldDemoUITests;
-			sourceTree = "<group>";
-		};
-		E0356E641DEDF43F00C6678C /* TKFormTextField */ = {
-			isa = PBXGroup;
-			children = (
-				E0356E651DEDF44F00C6678C /* TKFormTextField.swift */,
-			);
-			path = TKFormTextField;
 			sourceTree = "<group>";
 		};
 		E0CF02BF1EC0502D00490CA0 /* TKFormTextField */ = {
@@ -312,6 +320,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -368,8 +377,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0356E391DEDF3B200C6678C /* ViewController.swift in Sources */,
+				01CD0F3F251B5DF800AC40E9 /* TKFormTextField.swift in Sources */,
 				E0356E371DEDF3B200C6678C /* AppDelegate.swift in Sources */,
-				E0356E661DEDF44F00C6678C /* TKFormTextField.swift in Sources */,
 				E0AB0E2C1ED2A460000E28E0 /* TKDataValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,7 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E06AAA6D1E1A505500B5FCB5 /* TKFormTextField.swift in Sources */,
+				01CD0F56251B5E1700AC40E9 /* TKFormTextField.swift in Sources */,
 				E0356E571DEDF3B200C6678C /* TKFormTextFieldDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,7 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0CF02CB1EC0504800490CA0 /* TKFormTextField.swift in Sources */,
+				01CD0F47251B5E1400AC40E9 /* TKFormTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

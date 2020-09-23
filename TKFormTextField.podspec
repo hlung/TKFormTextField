@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/hlung/TKFormTextField.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.ios.deployment_target = '8.0'
-  s.source_files = 'TKFormTextField/Classes/**/*'
+  s.source_files = 'Sources/TKFormTextField/**/*.swift'
   
   # s.resource_bundles = {
   #   'TKFormTextField' => ['TKFormTextField/Assets/*.png']
