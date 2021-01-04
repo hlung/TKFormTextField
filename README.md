@@ -80,6 +80,9 @@ Carthage
 github "hlung/TKFormTextField"
 ```
 
+Swift Package Manager
+In Xcode, go to File > Swift Packages > Add Package Dependency... Look for TKFormTextField.
+
 ## Story
 
 For text input forms, using alerts for showing error is too intrusive, makes user lost context of which field is wrong, and require another tap to dismiss. And you can only show one at a time. I think TKFormTextField is the answer to text input form UI.
