@@ -81,7 +81,9 @@ github "hlung/TKFormTextField"
 ```
 
 Swift Package Manager
-In Xcode, go to File > Swift Packages > Add Package Dependency... Look for TKFormTextField.
+
+- Star this repo and add your github account in Xcode Preferences so that it Xcode can pick it up. (See [this documentation](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app).)
+- In Xcode, go to `File > Swift Packages > Add Package Dependency...` Search for TKFormTextField.
 
 ## Story
 
@@ -98,5 +100,4 @@ This is inspired by https://github.com/Skyscanner/SkyFloatingLabelTextField
 ## TODO
 
 - Support RTL
-- Support Swift Package Manager, or other dependency managers
 - Animate error message below
