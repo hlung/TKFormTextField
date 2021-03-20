@@ -30,6 +30,7 @@ class ViewController: UIViewController {
 
     // UITextField traditional properties
     self.emailTextField.placeholder = "Email"
+    self.emailTextField.info = "Enter your email here"
     self.emailTextField.enablesReturnKeyAutomatically = true
     self.emailTextField.returnKeyType = .next
     self.emailTextField.clearButtonMode = .whileEditing
