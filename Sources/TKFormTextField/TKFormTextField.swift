@@ -28,6 +28,7 @@ open class TKFormTextField: UITextField {
   fileprivate final func setup() {
     self.borderStyle = .none
     self.createTitleLabel()
+    self.createInfoLabel()
     self.createErrorLabel()
     self.createLineView()
     self.updateColors()
@@ -43,6 +44,7 @@ open class TKFormTextField: UITextField {
   // MARK: Views
   open var titleLabel: UILabel! // the label above input text
   open var lineView: UIView! // the line below input text
+  open var infoLabel: UILabel! // the info label below input text
   open var errorLabel: UILabel! // the error label below input text
   
   // MARK: Animation
@@ -92,6 +94,12 @@ open class TKFormTextField: UITextField {
     }
   }
   
+  open var infoColor: UIColor = UIColor.lightGray {
+    didSet {
+      self.updateColors()
+    }
+  }
+    
   open var errorColor: UIColor = UIColor.red {
     didSet {
       self.updateColors()
@@ -125,6 +133,13 @@ open class TKFormTextField: UITextField {
     }
   }
   
+  // A string for infoLabel
+  open var info: String? {
+    didSet {
+      self.updateControl(true)
+    }
+  }
+    
   // A string for errorLabel
   open var error: String? {
     didSet {
@@ -210,7 +225,19 @@ open class TKFormTextField: UITextField {
     view.accessibilityIdentifier = "line-view"
     self.addSubview(view)
   }
-  
+    
+  fileprivate func createInfoLabel() {
+    let label = UILabel()
+    label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    label.font = UIFont.systemFont(ofSize: 13)
+    label.alpha = 1.0
+    label.numberOfLines = 0
+    label.textColor = self.infoColor
+    label.accessibilityIdentifier = "info-label"
+    self.addSubview(label)
+    self.infoLabel = label
+  }
+    
   fileprivate func createErrorLabel() {
     let label = UILabel()
     label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -248,6 +275,7 @@ open class TKFormTextField: UITextField {
     self.updateColors()
     self.updateLineView()
     self.updateTitleLabel(animated)
+    self.updateInfoLabel()
     self.updateErrorLabel(animated)
   }
   
@@ -294,6 +322,11 @@ open class TKFormTextField: UITextField {
   fileprivate func updateTitleLabel(_ animated:Bool = false) {
     self.titleLabel.text = self.titleOrPlaceholder()
     self.updateTitleVisibility(animated)
+  }
+    
+  fileprivate func updateInfoLabel(_ animated:Bool = false) {
+    self.infoLabel.text = info
+    self.invalidateIntrinsicContentSize()
   }
   
   fileprivate func updateErrorLabel(_ animated:Bool = false) {
@@ -383,6 +416,16 @@ open class TKFormTextField: UITextField {
     let lineHeight: CGFloat = editing ? CGFloat(self.selectedLineHeight) : CGFloat(self.lineHeight)
     return CGRect(x: 0, y: bounds.size.height - lineHeight - errorHeight(), width: bounds.size.width, height: lineHeight)
   }
+    
+  open func infoLabelRectForBounds(_ bounds: CGRect) -> CGRect {
+    guard let info = info, !info.isEmpty else { return CGRect.zero }
+    let font: UIFont = infoLabel.font ?? UIFont.systemFont(ofSize: 17.0)
+  
+    let textAttributes = [NSAttributedString.Key.font: font]
+    let s = CGSize(width: bounds.size.width, height: 2000)
+    let boundingRect = info.boundingRect(with: s, options: .usesLineFragmentOrigin, attributes: textAttributes, context: nil)
+    return CGRect(x: 0, y: bounds.size.height, width: boundingRect.size.width, height: boundingRect.size.height)
+  }
   
   open func errorLabelRectForBounds(_ bounds: CGRect) -> CGRect {
     guard let error = error, !error.isEmpty else { return CGRect.zero }
@@ -430,6 +473,7 @@ open class TKFormTextField: UITextField {
     self.invalidateIntrinsicContentSize()
     self.titleLabel.frame = self.titleLabelRectForBounds(self.bounds, editing: self.isTitleVisible() || _renderingInInterfaceBuilder)
     self.errorLabel.frame = self.errorLabelRectForBounds(self.bounds)
+    self.infoLabel.frame = self.errorLabel.frame == CGRect.zero ? self.infoLabelRectForBounds(self.bounds) : CGRect.zero
     self.lineView.frame = self.lineViewRectForBounds(self.bounds, editing: self.editingOrSelected || _renderingInInterfaceBuilder)
 
     // Fix unwanted rightView sliding in animation when it's first shown
